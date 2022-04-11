@@ -1,0 +1,18 @@
+package com.evoke.WrapperClass;
+
+public class PrimitiveAndObject {
+
+	public static void main(String[] args) {
+		int x = 100;
+		Integer Y = Integer.valueOf(x); // Primitive to object
+		int z = Y.intValue(); // object to Primitive
+		System.out.println(Y);
+		System.out.println(z);
+
+		byte a = 122;
+		String s=Byte.toString(a);    //Primitive to String
+		 byte b= Byte.parseByte(s)   // String to Primitive
+
+	}
+
+}

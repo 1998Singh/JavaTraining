@@ -1,0 +1,14 @@
+package com.evoke.corejavabasics;
+
+public class StaticMethodsDemo {
+
+	public static void main(String[] args)
+	{
+		static void method1(){
+			System.out.println("Inside method 1");
+			
+		}
+
+	}
+
+}

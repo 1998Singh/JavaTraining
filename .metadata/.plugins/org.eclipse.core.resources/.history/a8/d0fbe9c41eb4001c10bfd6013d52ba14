@@ -1,0 +1,17 @@
+package com.evoke.nonstaticmembers;
+
+public class ThisKeyDomo {
+	int x;
+	
+	ThisKeyDemo(){
+		System.out.println(this);
+		
+	}
+	public static void main(String[] args) {
+		new ThisKeyDemo();
+		new ThisKeyDemo();
+	}
+
+		
+
+}
