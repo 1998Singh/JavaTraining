@@ -1,0 +1,37 @@
+package com.evoke.oopsconcepts;
+
+// Run Time Polymorphism (Method Overriding)
+
+public class Audi {
+	String companyName;
+	String CarName;
+	String carModel;
+	double price;
+
+	public Audi(String companyName, String carName, String carModel, double price) // Parameterize costructor
+	{
+		super();
+		this.companyName = companyName;
+		this.CarName = carName;
+		this.carModel = carModel;
+		this.price = price;
+	}
+
+	public String getCarName() {
+		System.out.println("This is from Audi Class");
+		return CarName;
+	}
+
+	public void setCarName(String carName) {
+		this.CarName = carName;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+}

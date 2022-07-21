@@ -1,0 +1,29 @@
+package com.evoke.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JdbcConfig {
+
+	public void connect(String url, String userName, String password, String driverName) {
+
+		// Initialize the JDBC connection
+		Connection connection = null;
+
+		try {
+			// Initialize the JDBC driver
+			Class.forName(driverName);
+
+			// Establish the connection
+			connection = DriverManager.getConnection(url, userName, password);
+
+			System.out.println("Connectoin is successfully established...");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.evoke.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class PreparedStatementDemo {
+
+	Connection connection = null;
+
+	public void connect(String url, String userName, String password, String driverName) {
+		try {
+
+			Class.forName(driverName);
+
+			connection = DriverManager.getConnection(url, userName, password);
+
+			System.out.println("Connection Successfull...");
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			System.exit(0);
+		}
+	}
+
+	public void insert(String sql) {
+		PreparedStatement stm;
+		try {
+			stm = connection.prepareStatement(
+					"INSERT INTO public.student(\r\n" + "	roll_no, name, stream, fee, percentage, gender)");
+			stm.setInt(1, 7);
+			stm.setString(2, "Rajesh");
+			stm.setString(3, "ECE");
+			stm.setInt(4, 85);
+			stm.setString(5, "M");
+
+			int record = stm.executeUpdate(sql);
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+}

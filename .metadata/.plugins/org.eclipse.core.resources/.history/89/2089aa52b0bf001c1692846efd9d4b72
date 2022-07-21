@@ -1,0 +1,22 @@
+package com.evoke.constructors;
+
+public class TestBank {
+
+	public static void main(String[] args) {
+
+		Bank b1 = new Bank(); // Object For no argument constructor
+
+		System.out.println("bankholder 1 :" + b1.bankname + "\n" + b1.bankholder_name + "\n" + b1.bankaccount_number
+				+ "\n" + b1.bank_balance);
+
+		// Object For Parameterize Constructor
+
+//		Bank b2 = new Bank("PNB", "Shiv", 1234568, 20000.38);
+//		Bank b3 = new Bank("HDFC", "Piyush", 1237568, 20500.38);
+//		System.out.println("\nbankholder 2 :" + b2.bankname + "\n" + b2.bankholder_name + "\n" + b2.bankaccount_number
+//				+ "\n" + b2.bank_balance);
+//		System.out.println("\nbankholder 3 :" + b3.bankname + "\n" + b3.bankholder_name + "\n" + b3.bankaccount_number
+//				+ "\n" + b3.bank_balance);
+	}
+
+}

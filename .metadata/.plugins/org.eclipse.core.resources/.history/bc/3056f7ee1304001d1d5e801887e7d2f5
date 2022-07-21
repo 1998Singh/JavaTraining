@@ -1,0 +1,17 @@
+package com.evoke.jdbc;
+
+public class JdbcTest {
+
+	public static void main(String[] args) {
+
+		String url = "jdbc:postgresql://localhost:5432/Test_DB ";
+		String userName = "postgres";
+		String password = "123456";
+		String driverName = "org.postgresql.Driver";
+
+		JdbcConfig config = new JdbcConfig();
+        config.connect(url, userName, password, driverName);
+
+	}
+
+}

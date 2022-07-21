@@ -1,0 +1,23 @@
+package com.evoke.strings;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexDemo2 {
+
+	public static void main(String[] args) {
+		Pattern p = Pattern.compile("[a-z]");
+		Matcher m = p.matcher("sharad123@gmail.com");
+		while (m.find()) {
+			System.out.println("Index value of patteren & pattern = " + m.start() + "_____ " + m.group());
+
+		}
+	}
+
+}
+//    character classes  :-
+// 1. [abc]= either a or b or c
+// 2. [a-z]= any lower case alphabet symbol
+// 3. [A-Z]= any upper case alphabet symbol
+// 4. [0-9]=any digits from 0 to 9.
+// 5. [^abca-z0-9]= except these group.

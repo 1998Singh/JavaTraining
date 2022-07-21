@@ -1,0 +1,19 @@
+package com.evoke.strings;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexDemo {
+
+	public static void main(String[] args) {
+		int count = 0;
+		Pattern p = Pattern.compile("ab");
+		Matcher m = p.matcher("abccabcab");
+
+		while (m.find()) {
+			count++;
+			System.out.println("the  indexvalue ab cantains : " + m.start() + "....." + m.end() + "....." + m.group());
+		}
+		System.out.println("the total no of occurence of ab = " + count);
+	}
+}
